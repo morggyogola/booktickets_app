@@ -10,17 +10,19 @@ class BottomBar extends StatefulWidget {
 }
 
 class _BottomBarState extends State<BottomBar> {
+  static final List<Widget> _widgetOptions = <Widget>[
+    const Text("Home"),
+    const Text("Search"),
+    const Text("Tickets"),
+    const Text("Profile")
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Center(child: Text("My Tickets")),
       ),
-      body: const Center(
-        child: Text(
-            "My body"
-        ),
-      ),
+      body: Center(child: _widgetOptions[0]),
       bottomNavigationBar: BottomNavigationBar(
         elevation: 10,
         showSelectedLabels: false,
@@ -40,7 +42,6 @@ class _BottomBarState extends State<BottomBar> {
           BottomNavigationBarItem(icon: Icon(FluentSystemIcons.ic_fluent_person_regular),
               activeIcon: Icon(FluentSystemIcons.ic_fluent_person_filled),
               label: "Person"),
-
         ],
       ),
     );
