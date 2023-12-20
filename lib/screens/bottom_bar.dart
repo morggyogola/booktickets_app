@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class BottomBar extends StatefulWidget {
   const BottomBar({super.key});
@@ -10,6 +11,29 @@ class BottomBar extends StatefulWidget {
 class _BottomBarState extends State<BottomBar> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Center(child: Text("My Tickets")),
+      ),
+      body: const Center(
+        child: Text(
+            "My body"
+        ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        elevation: 10,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        selectedItemColor: Colors.blueGrey,
+        unselectedItemColor: const Color(0xFF526480),
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.search),label: "Search"),
+          BottomNavigationBarItem(icon: Icon(Icons.airplane_ticket_sharp),label: "Tickets"),
+          BottomNavigationBarItem(icon: Icon(Icons.person),label: "Person"),
+
+        ],
+      ),
+    );
   }
 }
