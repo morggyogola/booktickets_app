@@ -1,3 +1,4 @@
+import 'package:ebook_app/screens/home_screen.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +13,7 @@ class BottomBar extends StatefulWidget {
 class _BottomBarState extends State<BottomBar> {
   int _selectedIndex=0;
   static final List<Widget> _widgetOptions = <Widget>[
-    const Text("Home"),
+    HomeScreen(),
     const Text("Search"),
     const Text("Tickets"),
     const Text("Profile")
@@ -27,9 +28,7 @@ class _BottomBarState extends State<BottomBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Center(child: Text("My Tickets")),
-      ),
+
       body: Center(child: _widgetOptions[_selectedIndex]),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
@@ -38,6 +37,7 @@ class _BottomBarState extends State<BottomBar> {
         showSelectedLabels: false,
         showUnselectedLabels: false,
         selectedItemColor: Colors.blueGrey,
+        type: BottomNavigationBarType.fixed,
         unselectedItemColor: const Color(0xFF526480),
         items: const [
           BottomNavigationBarItem(icon: Icon(FluentSystemIcons.ic_fluent_home_regular),
