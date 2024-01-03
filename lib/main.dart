@@ -1,4 +1,5 @@
 import 'package:ebook_app/screens/bottom_bar.dart';
+import 'package:ebook_app/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
 
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        primaryColor: primary,
         useMaterial3: true,
       ),
       home: const BottomBar(),
