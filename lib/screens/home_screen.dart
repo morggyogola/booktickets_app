@@ -50,7 +50,7 @@ class HomeScreen extends StatelessWidget {
 
                     ],
                   ),
-                  const Gap(25),
+                  const Gap(35),
                   Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
@@ -66,7 +66,20 @@ class HomeScreen extends StatelessWidget {
                         )
                       ],
                     ),
-                  )
+                  ),
+                   const Gap(40),
+                   Row(
+                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("Upcoming Flights",style: Styles.headLineStyle2,),
+                      InkWell(
+                          onTap: (){
+                            print("You are tapped");
+                          },
+                          child: Text("View all",style: Styles.textStyle.copyWith(color: Styles.primaryColor ),))
+                    ],
+                  ),
+
                 ],
               ),
             )
