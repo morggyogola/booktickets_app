@@ -1,3 +1,4 @@
+import 'package:ebook_app/screens/ticket_view.dart';
 import 'package:ebook_app/utils/app_styles.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
@@ -82,7 +83,9 @@ class HomeScreen extends StatelessWidget {
 
                 ],
               ),
-            )
+            ),
+            Gap(30),
+            TicketView(),
           ],
       ),
     );
